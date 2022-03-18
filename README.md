@@ -1,1 +1,1 @@
-# Indian-flag-animation
+# indian-flag-animation
