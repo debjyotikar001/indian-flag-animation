@@ -1,0 +1,59 @@
+
+:root {
+  --orange: linear-gradient(to bottom, #ff8011, #ffae4a);
+  --green: linear-gradient(to bottom, #75fc3b, #46ad1b);
+  --transform: translate(-50%, -50%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+   background-color: black;
+}
+.orange,
+.white,
+.green{
+  height: 33.33vh;
+  width: 0;
+  position: absolute;
+  animation: grow 2s forwards;
+}
+.orange{
+  background: var(--orange);
+  top: 0;
+  left: 0;
+}
+.white{
+  background: white;
+  top: 33.33vh;
+  right: 0;
+}
+.green{
+  background: var(--green);
+  bottom: 0;
+  left: 0;
+}
+@keyframes grow{
+  100%{
+    width: 100vw;
+  }
+}
+.wheel{
+  position: absolute;
+  transform: var(--transform);
+  left: 50%;
+  top: 50%;
+  width: 0;
+  animation: spin 3s 2s linear infinite;
+}
+@keyframes spin{
+  0%{
+    width: 30vmin;
+  }
+  100%{
+    width: 30vmin;
+    transform: var( --transform) rotate(360deg);
+  }
+}
